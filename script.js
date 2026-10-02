@@ -27,27 +27,3 @@ themeToggle.addEventListener("click", () => {
     light ? "☾" : "☼";
 
 });
-
-
-document.getElementById("contactForm").addEventListener("submit", (e) => {
-
-  e.preventDefault();
-
-  const form = e.currentTarget;
-
-  const name = form.name.value.trim();
-  const email = form.email.value.trim();
-  const message = form.message.value.trim();
-
-  const subject = encodeURIComponent(
-    `Portfolio enquiry from ${name}`
-  );
-
-  const body = encodeURIComponent(
-    `Hi Anushka,\n\n${message}\n\nName: ${name}\nEmail: ${email}`
-  );
-
-  window.location.href =
-    `mailto:anushkasangal15@gmail.com?subject=${subject}&body=${body}`;
-
-});
